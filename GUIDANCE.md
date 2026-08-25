@@ -18,7 +18,7 @@ fetch(URL)
     .then((response) => {
 
         // Handle the API response here.
-
+        
         // You can access the response object via the `response` parameter
 
     })
@@ -40,9 +40,28 @@ fetch(URL)
 * In your event listener function...
   * Query the text input
   * Get the `.value` of the text input
-  * Create a variable that holds the URL to which you'll make your GET request. It will look like this `https://goweather.herokuapp.com/weather/{city}` but with `{city}` replaced with the value of the text input
+  * Create a variable that holds the URL to which you'll make your GET request. It will look like this `https://goweather.herokuapp.com/weather/${city}` but with `{city}` replaced with the value of the text input
   * Make a GET request to that URL with `fetch` (syntax seen above)
   * When you handle the API response object
     * Individually query your `div`s for temperature, wind, and description
     * Store the `.temperature` proprety of the API response object in the temperature div. Do the same for `.wind` and `.description`
     
+
+let anotherVariable = document.querySelector("#item-id")
+
+const fetchFunction = () => {
+    let variableChange = variableNames
+    let url = encodeURI(`https://link.com/${variableNames})
+
+    fetch (url)
+    .then((data) => data.message)
+    .then((response) => {
+        CODE GOES HERE Examples:
+        something.textContent = reponse.KeyValue on API
+        anotherVariable.height = 100
+        anotherVariable.width = 100
+    })
+
+}
+
+variable.addeventlistener("click", fetchFunction)
